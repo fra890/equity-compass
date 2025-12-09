@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+  font-family: 'Inter', sans-serif; 
+  background-color: #f8fafc; 
+}
+
+/* Custom scrollbar for tables */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* PRINT OPTIMIZATIONS */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: white !important;
+  }
+  
+  /* Ensure charts and graphics print */
+  svg, canvas {
+    max-width: 100% !important;
+    break-inside: avoid;
+  }
+
+  /* Prevent weird page breaks */
+  .break-inside-avoid {
+    page-break-inside: avoid;
+  }
+  
+  /* Hide scrollbars in print */
+  .custom-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Reset shadows for cleaner print */
+  * {
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "EquityCompass",
+  "description": "A comprehensive RSU and equity tracking dashboard for financial advisors, featuring automated vesting schedules, tax liability estimation, and real-time stock price updates powered by Gemini.",
+  "requestFramePermissions": []
+}
